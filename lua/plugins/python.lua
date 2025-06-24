@@ -1,0 +1,26 @@
+return {
+	-- {
+	-- 	"AckslD/swenv.nvim",
+	-- 	lazy = true,
+	-- 	ft = "python";
+	--
+	-- 	init = function ()
+	-- 		require('swenv.api').auto_venv()
+	-- 	end
+	-- },
+	--
+	-- {
+	-- 	'ahmedkhalf/project.nvim',
+	-- 	lazy = true,
+	-- 	ft = "python";
+	--
+	-- 	init = function()
+	-- 		require("project_nvim").setup {
+	-- 			-- your configuration comes here
+	-- 			-- or leave it empty to use the default settings
+	-- 			-- refer to the configuration section below
+	-- 		}
+	-- 	end
+	-- },
+	--
+}

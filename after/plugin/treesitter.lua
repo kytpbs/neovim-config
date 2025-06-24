@@ -1,0 +1,6 @@
+require'nvim-treesitter'.setup {
+  -- Directory to install parsers and queries to
+  install_dir = vim.fn.stdpath('data') .. '/site'
+}
+
+require'nvim-treesitter'.install ({ 'help', 'lua', 'json', 'python'})
