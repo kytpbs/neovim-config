@@ -13,9 +13,10 @@ return {
 	},
 
 
-	{
-		'andweeb/presence.nvim'
-	},
+    {
+        'andweeb/presence.nvim',
+        event = "VeryLazy"
+    },
 
 	{
 		'numToStr/Comment.nvim',
