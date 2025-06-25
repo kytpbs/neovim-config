@@ -12,6 +12,11 @@ lspconfig_defaults.capabilities = vim.tbl_deep_extend(
   require('cmp_nvim_lsp').default_capabilities()
 )
 
+require("lspconfig").basedpyright.setup{
+    enableTypeIgnoreComments = true,
+    useLibraryCodeForTypes = true,
+}
+
 -- This is where you enable features that only work
 -- if there is a language server active in the file
 vim.api.nvim_create_autocmd('LspAttach', {
