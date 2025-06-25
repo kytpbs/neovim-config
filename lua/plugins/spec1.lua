@@ -7,25 +7,10 @@ return {
     },
 
 
-	{
-		'mbbill/undotree',
-		lazy=false
-	},
-
-
     {
-        'andweeb/presence.nvim',
-        event = "VeryLazy"
+        "vhyrro/luarocks.nvim",
+        priority = 1000, -- Very high priority is required, luarocks.nvim should run as the first plugin in your config.
+        config = true,
     },
 
-	{
-		'numToStr/Comment.nvim',
-		lazy=false
-	},
-
-	{
-	  "vhyrro/luarocks.nvim",
-	  priority = 1000, -- Very high priority is required, luarocks.nvim should run as the first plugin in your config.
-	  config = true,
-	},
 }
