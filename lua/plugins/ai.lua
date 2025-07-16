@@ -4,5 +4,7 @@ return {
         config = function()
             require("supermaven-nvim").setup({})
         end,
+
+        event = "VeryLazy",
     },
 }
