@@ -20,16 +20,8 @@ return {
             { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
         }
     },
-
-    {
-        "lewis6991/gitsigns.nvim",
-        opts = {
-            -- 10 is priority of "INFO" level
-            -- and setting it to 10 means that instead of "INFO" diagnostic it will show gitsigns
-            sign_priority = 10,
-        },
-
-        lazy = false,
+<<<<<<< HEAD
+=======
     },
 
     {
@@ -77,4 +69,5 @@ return {
             { "g?",         "<cmd>Git<cr>", desc = "Git Status" },
         }
     },
+>>>>>>> ff90171 (add vim-fugitive with lazygit lazy config)
 }
