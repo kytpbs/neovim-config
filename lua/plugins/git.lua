@@ -20,4 +20,50 @@ return {
             { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
         }
     },
+
+    {
+        'tpope/vim-fugitive',
+        lazy = true,
+        cmd = {
+            "G",
+            "GBrows",
+            "GDelet",
+            "GMov",
+            "GRemov",
+            "GRenam",
+            "GUnlin",
+            "Gbrows",
+            "GcLo",
+            "Gc",
+            "Gclo",
+            "Gdelet",
+            "Gdiffspli",
+            "Gdro",
+            "G",
+            "Gedi",
+            "Ggre",
+            "Ghdiffspli",
+            "Gi",
+            "Gitsign",
+            "GlLo",
+            "Glc",
+            "Glgre",
+            "Gllo",
+            "Gmov",
+            "Gpedi",
+            "Grea",
+            "Gremov",
+            "Grenam",
+            "Gspli",
+            "Gtabedi",
+            "Gvdiffspli",
+            "Gvspli",
+            "Gw",
+            "Gwrit"
+        },
+        keys = {
+            { "<leader>gs", "<cmd>Git<cr>", desc = "Git Status" },
+            { "g?",         "<cmd>Git<cr>", desc = "Git Status" },
+        }
+    },
 }
