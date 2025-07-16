@@ -3,6 +3,8 @@ vim.opt.relativenumber = true
 
 vim.opt.signcolumn = 'yes'
 
+vim.cmd([[filetype plugin indent on]])
+
 vim.o.shell = "pwsh.exe"
 vim.o.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command $PSStyle.OutputRendering = 'PlainText';"
 vim.o.shellredir = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
