@@ -1,6 +1,5 @@
 -- Reserve a space in the gutter
 -- This will avoid an annoying layout shift in the screen
-vim.opt.signcolumn = 'yes'
 vim.diagnostic.config({ virtual_text = true })
 
 -- Add cmp_nvim_lsp capabilities settings to lspconfig
