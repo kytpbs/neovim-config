@@ -23,7 +23,23 @@ vim.api.nvim_create_autocmd('LspAttach', {
     desc = 'LSP actions',
     callback = function(event)
         local opts = { buffer = event.buf }
+
+        vim.diagnostic.config({
+            virtual_text = true,
+            severity_sort = true,
+            update_in_insert = true,
+        })
+
         vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
+
+        vim.keymap.set('n', 'gk', vim.diagnostic.open_float, opts)
+
+        -- vim.keymap.set('n', 'gk', function ()
+        --     local line_diagnostic = vim.diagnostic.get(0, {lnum = vim.fn.line('.') - 1})
+        --     if #line_diagnostic > 1 then
+        --         vim.diagnostic.open_float()
+        --     end
+        -- end, opts)
 
         vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
         vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
