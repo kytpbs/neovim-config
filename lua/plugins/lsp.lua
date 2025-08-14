@@ -23,6 +23,9 @@ return {
 	{
 		'mason-org/mason-lspconfig.nvim',
 		tag = 'v1.32.0',
+        dependencies = {
+            'mason.nvim',
+        },
 		pin = true
 	},
 
