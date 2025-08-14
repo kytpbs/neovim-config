@@ -16,10 +16,7 @@ require('mason-lspconfig').setup({
                             useLibraryCodeForTypes = true,
 
                             diagnosticSeverityOverrides = {
-                                -- reportGeneralTypeIssues = 'none',
-                                -- reportArgumentType = 'none',
-                                -- reportUnknownMemberType = 'none',
-                                -- reportAssignmentType = 'none',
+                                reportMissingTypeStubs = 'none',
                                 reportExplicitAny = 'none',
                                 reportImplicitOverride = 'none',
                             },
