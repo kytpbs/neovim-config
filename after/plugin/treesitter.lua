@@ -6,7 +6,6 @@ require 'nvim-treesitter'.setup {
 }
 
 require 'nvim-treesitter'.install({
-    'help',
     'vim',
     'lua',
     'json',
