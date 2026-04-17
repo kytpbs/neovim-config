@@ -17,4 +17,6 @@ require 'nvim-treesitter'.install({
     'yaml',
     'typescript',
     'javascript',
+    'markdown',
+    'markdown_inline',
 })
