@@ -3,9 +3,7 @@
 vim.diagnostic.config({ virtual_text = true })
 
 -- Configure hover to render markdown properly
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-    border = "rounded",
-})
+vim.o.winborder = "rounded"
 
 -- Add cmp_nvim_lsp capabilities settings to lspconfig
 -- This should be executed before you configure any language server
