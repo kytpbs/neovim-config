@@ -9,45 +9,41 @@ vim.lsp.enable('ty')
 -- Config at /lsp/jdtls.lua
 vim.lsp.enable('jdtls')
 
+require('mason-tool-installer').setup({
+    ensure_installed = {
+        'actionlint',          -- linter (GitHub Actions)
+        'debugpy',             -- DAP (Python)
+        'java-debug-adapter',  -- DAP (Java)
+        'java-test',           -- Java test runner
+        'prettier',            -- formatter
+        'pydocstyle',          -- linter (Python docstrings)
+        'pylint',              -- linter (Python)
+        'pyment',              -- formatter/generator (Python docstrings)
+        'uv',                  -- Python package manager
+    },
+    auto_update = false,
+    run_on_start = true,
+})
+
+
 require('mason-lspconfig').setup({
-    handlers = {
-        -- Default handler for all languages
-        function(server_name)
-            require('lspconfig')[server_name].setup({})
-        end,
-
-        ["jdtls"] = function()
-            -- Switched to new nvim setup,
-            -- so we don't configure anything with mason-lspconfig
-            -- Instead, all configuration is at /lsp/jdtls.lua, which is auto-loaded by nvim
-        end,
-
-        -- basedpyright for Python diagnostics, hover, go-to-def, etc. (not completion)
-        ["basedpyright"] = function()
-            require('lspconfig').basedpyright.setup({
-                on_attach = function(client, bufnr)
-                    -- Disable completion from basedpyright (ty handles completion)
-                    client.server_capabilities.completionProvider = nil
-                end,
-                settings = {
-                    basedpyright = {
-                        analysis = {
-                            enableTypeIgnoreComments = true,
-                            useLibraryCodeForTypes = true,
-
-                            diagnosticSeverityOverrides = {
-                                reportMissingTypeStubs = 'none',
-                                reportExplicitAny = 'none',
-                                reportImplicitOverride = 'none',
-                            },
-                            inlayHints = {
-                                callArgumentNames = true
-                            }
-                        }
-                    }
-                }
-            })
-        end,
-
+    ensure_installed = {
+        'basedpyright',
+        'clangd',
+        'dockerls',
+        'gh-actions-language-server',
+        'harper_ls',
+        'jdtls',
+        'kotlin_language_server',
+        'lua_ls',
+        'powershell_es',
+        'pyrefly',
+        'ruff',
+        'sonarlint-language-server',
+        'taplo',
+        'ty',
+        'ts_ls',
+        'vtsls',
+        'yamlls',
     },
 })

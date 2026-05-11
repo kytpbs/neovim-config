@@ -1,7 +1,7 @@
 return {
 	{
 		'neovim/nvim-lspconfig',
-		tag = 'v1.8.0',
+		tag = 'v2.8.0',
 		pin = true
 	},
 
@@ -16,15 +16,21 @@ return {
 	--mason
 	{
 		'mason-org/mason.nvim',
-		tag = 'v1.11.0',
+		tag = 'v2.2.1',
 		pin = true
 	},
 
+    {
+        'WhoIsSethDaniel/mason-tool-installer.nvim',
+        dependencies = { 'mason-org/mason.nvim' },
+    },
+
 	{
 		'mason-org/mason-lspconfig.nvim',
-		tag = 'v1.32.0',
+		tag = 'v2.2.0',
         dependencies = {
             'mason.nvim',
+            'nvim-lspconfig',
         },
 		pin = true
 	},
