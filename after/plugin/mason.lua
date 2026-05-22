@@ -37,7 +37,7 @@ require('mason-lspconfig').setup({
         'kotlin_language_server',
         'lua_ls',
         'powershell_es',
-        'pyrefly',
+        -- 'pyrefly', -- Maybe add in the future instead of ty or basedpyright
         'ruff',
         'sonarlint-language-server',
         'taplo',
