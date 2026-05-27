@@ -9,6 +9,16 @@ return {
                 enableTypeIgnoreComments = true,
                 useLibraryCodeForTypes = true,
 
+                -- ROS 2 Humble system packages (apt-installed, not on PyPI). Set here
+                -- (not just pyproject.toml) because LSP-provided analysis settings can
+                -- override the per-project [tool.basedpyright] config.
+                extraPaths = {
+                    '/opt/ros/kilted/lib/python3.12/site-packages',
+                    '/opt/ros/kilted/local/lib/python3.12/dist-packages',
+                    '/opt/ros/humble/lib/python3.10/site-packages',
+                    '/opt/ros/humble/local/lib/python3.10/dist-packages',
+                },
+
                 diagnosticSeverityOverrides = {
                     reportMissingTypeStubs = 'none',
                     reportExplicitAny = 'none',
