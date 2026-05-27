@@ -2,9 +2,8 @@ require('mason').setup({})
 -- Temporary ty workaround, since it's not yet supported by mason-lspconfig
 
 
--- ty for Python completion only
--- Config at /lsp/ty.lua
-vim.lsp.enable('ty')
+-- ty disabled: too many LSP conflicts with PYTHONPATH/ROS workspace setup
+-- vim.lsp.enable('ty')
 
 -- Config at /lsp/jdtls.lua
 vim.lsp.enable('jdtls')
